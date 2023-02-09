@@ -18,6 +18,7 @@ class CreateClientsTable extends Migration
             $table->foreignId('address_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
