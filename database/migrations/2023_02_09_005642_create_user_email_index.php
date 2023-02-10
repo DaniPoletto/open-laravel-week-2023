@@ -14,7 +14,7 @@ class CreateUserEmailIndex extends Migration
      */
     public function up()
     {
-        DB::unprepared("CREATE UNIQUE INDEX user_email_index on users(email) WHERE deleted_at IS NULL");
+        DB::unprepared("CREATE UNIQUE INDEX user_email_index on users(email, deleted_at)");
     }
 
     /**
